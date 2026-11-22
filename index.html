@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>طلبات | اطلب وإحنا نوصّلك</title>
+<meta name="description" content="اكتب طلبك وعنوانك وتليفونك، واتصل بينا أو ابعت الطلب واتساب، وطلباتك توصل لحد بابك.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Lalezar&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero" id="top">
+  <i class="orb o1"></i><i class="orb o2"></i>
+  <span class="fl f1"><svg class="ic" viewBox="0 0 24 24"><circle cx="6" cy="17" r="2.6"/><circle cx="18" cy="17" r="2.6"/><path d="M8.6 17H13l2.2-8H19M15.2 9l-.8-3H12M5 11h5"/></svg></span>
+  <span class="fl f2"><svg class="ic" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+  <span class="fl f3"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+  <nav class="nav">
+    <a class="brand" href="#top" aria-label="طلبات"><span class="wm">طلبات</span></a>
+    <div class="nav-a">
+      <a class="pill" href="tel:01202656522"><svg class="ic" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>اتصل</span></a>
+      <a class="pill wa" href="https://wa.me/201043635659" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20l1.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span>واتساب</span></a>
+    </div>
+  </nav>
+  <div class="hero-in">
+    <p class="kick">طلباتك عندنا أمانة</p>
+    <h1>اطلب اللي نفسك فيه،<br><span class="gold">وإحنا نوصّله لحد بابك</span></h1>
+    <p class="sub">اكتب طلبك وعنوانك، واتصل بينا أو ابعته على واتساب. من غير تحميل تطبيقات ولا تسجيل حسابات.</p>
+    <a class="cta" href="#order">اكتب طلبك دلوقتي</a>
+    <ul class="chips"><li>توصيل لحد الباب</li><li>طلب بسيط وسريع</li><li>خدمة بتتابع معاك</li></ul>
+  </div>
+</header>
+
+<main>
+  <section class="order" id="order">
+    <form id="f" class="card" novalidate>
+      <h2>اكتب طلبك</h2>
+      <p class="mut">املا البيانات، وبعدها اتصل بينا أو ابعت الطلب على واتساب.</p>
+      <label>اسمك<input name="cust" autocomplete="name" placeholder="مثال: محمد أحمد"></label>
+      <label>رقم تليفونك<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx"></label>
+      <label>عنوانك بالتفصيل<textarea name="addr" rows="2" placeholder="المنطقة، الشارع، رقم العمارة، الدور..."></textarea></label>
+      <label>إنت عايز إيه؟<textarea name="items" rows="4" placeholder="مثال: 2 بيتزا مارجريتا كبيرة + بيبسي + سلطة"></textarea></label>
+      <div class="btns">
+        <button type="button" id="wa" class="btn wab"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20l1.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>ابعت الطلب واتساب</button>
+        <a class="btn callb" href="tel:01202656522"><svg class="ic" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>اتصل بينا <span class="n">01202656522</span></a>
+        <button type="button" id="cp" class="btn ghostb">نسخ نص الرسالة</button>
+      </div>
+      <p class="err" id="err" role="alert"></p>
+      <p class="okm" id="ok" role="status"></p>
+    </form>
+    <aside class="pv" aria-label="شكل رسالة واتساب">
+      <div class="pvh"><span class="av">ط</span><div><b>طلبات</b><small>معاينة رسالتك</small></div></div>
+      <div class="chat"><div class="bub" id="bub"></div></div>
+      <p class="mut small">دي الرسالة اللي هتتبعت لينا، وبتتحدّث وإنت بتكتب.</p>
+    </aside>
+  </section>
+
+  <section class="steps">
+    <h2>إزاي بتطلب؟</h2>
+    <div class="sg">
+      <div class="st"><b>1</b><h3>اكتب طلبك</h3><p>اسمك وتليفونك وعنوانك، وإنت عايز إيه بالظبط.</p></div>
+      <div class="st"><b>2</b><h3>اتصل أو ابعت واتساب</h3><p>اتصل بينا مباشرة، أو ابعت الطلب جاهز برسالة منظمة.</p></div>
+      <div class="st"><b>3</b><h3>استنى الدليفري</h3><p>الكابتن بيوصلك طلبك لحد باب بيتك.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="wm">طلبات</span>
+  <p class="tag">طلباتك عندنا أمانة، وراحتك أولويتنا</p>
+  <p class="ct"><a href="tel:01202656522" class="n">01202656522</a><a href="https://wa.me/201043635659" target="_blank" rel="noopener" class="n">01043635659</a></p>
+  <p class="sup">تحت إشراف المستشار عز والمستشار معتز</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
